@@ -1,0 +1,25 @@
+---
+- name : To Install EC2 instance
+  hosts : localhost
+  vars_prompt:
+  - name : aws_access_key_var 
+    prompt : "Enter aws access key:"
+  - name : aws_secret_key_var
+    prompt : "Enter aws secret key"
+
+  connection : local
+
+  tasks:
+   - name: Install EC2 instance
+     ec2: 
+         assign_public_ip: true
+         count: 1
+         aws_access_key: "{{ aws_access_key_var }}" 
+         aws_secret_key: "{{ aws_secret_key_var }}" 
+         group: default
+         image: ami-0d1cd67c26f5fca19
+         instance_type: t2.micro
+         key_name: ec2_key
+         region: us-west-2
+         vpc_subnet_id: subnet-d8727793
+         wait: true
