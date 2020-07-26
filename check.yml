@@ -1,0 +1,7 @@
+---
+
+- hosts: localhost 
+  tasks:
+    - name: 'Fail if not run with --check'
+      shell: 'exit 1'
+      ignore_errors: yes

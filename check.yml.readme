@@ -1,0 +1,1 @@
+Use ignore_errors if you want your playbook to proceed next even in case of error
