@@ -1,0 +1,12 @@
+Start will 3 dash
+# Write has for a comment
+make a dash space & then name. Write purpose of yaml file here
+With same indentation write host name & become if sudo access needed
+Tasks should have same identation as hosts
+For individual task put space then dash & then name
+Next line should have module name
+Make Sure there is no space between name & colon and module name & colon
+Look it looks confusing where to use equal to & where to use color 
+Colon is for key value
+= is for module argument
+If you want to write module arguments in single line , then use = else use two spaces & then :
